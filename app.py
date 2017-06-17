@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, render_template
 
 app =  Flask(__name__)
 
@@ -10,12 +10,9 @@ def index():
 def profile():
     return 'lol this is the profile page dude'
 
-@app.route('/profile/<int:username>', methods=['GET','POST'])
+@app.route('/profile/<username>', methods=['GET','POST'])
 def username(username):
-    if request.method == 'POST':
-        return 'this is a post form'
-    elif request.method == 'GET':
-        return 'this is a GET form'
+    return render_template('profile.html', username = username)
 
 
 if __name__ == '__main__':
