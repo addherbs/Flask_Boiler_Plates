@@ -1,8 +1,11 @@
 {% from "_macro.html" import listing %}
-
+{% from "_macro.html" import finalNamesList %}
 {% extends 'structure.html' %}
+
 
 
 {% block structure %}
   {{ listing(testList)   }}
+  {{finalNamesList(lists)}}
+
 {% endblock %}

@@ -8,3 +8,14 @@
 </ul>
 
 {% endmacro %}
+
+
+{% macro finalNamesList(lists) %}
+<h1> Displaying Names</h1>
+<ul>
+{% for names in lists%}
+<li>{{  names}} </li>
+{% endfor %}
+</ul>
+
+{% endmacro %}
