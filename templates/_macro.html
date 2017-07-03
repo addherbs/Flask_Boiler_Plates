@@ -1,4 +1,10 @@
-{% macro testList(list)}
-<h1> Testing Html</h1>
+{% macro listing(testList) %}
+<h1> Testing Lists</h1>
+
+<ul>
+  {% for data in testList %}
+    <li>{{ data.title }}</li>
+  {% endfor %}
+</ul>
 
 {% endmacro %}
