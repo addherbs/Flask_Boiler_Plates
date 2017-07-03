@@ -1,13 +1,5 @@
-<!Doctype html>
-
-<html>
-    <head>
-      <title> This is my first try using Flask App</title>
-      <link rel="stylesheet" type="text/css" href=" {{  url_for('static', filename= "style.css")  }} ">
-    <head>
-
-    <body>
-      <h3>    <p> Hey There {{ username }}  </p> </h3>
-      <h1> lol  this was just a test </h1>
-    <body>
-<html>
+{% extends 'structure.html' %}
+{% block structure%}
+<h3>    <p> Hey There {{ username }}  </p> </h3>
+<h1> lol  this was just a test </h1>
+{% endblock %}

@@ -6,14 +6,9 @@ app =  Flask(__name__)
 def index():
     return 'this is the lol homepage'
 
-@app.route('/profile')
-def profile():
-    return 'lol this is the profile page dude'
-
-@app.route('/profile/<username>', methods=['GET','POST'])
+@app.route('/<username>', methods=['GET','POST'])
 def username(username):
     return render_template('profile.html', username = username)
-
 
 if __name__ == '__main__':
     app.run()
